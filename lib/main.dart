@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:yoo_katale/sign.dart';
+import 'package:yoo_katale/user_profile.dart';
 import 'package:yoo_katale/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:share_plus/share_plus.dart';
@@ -17,6 +18,7 @@ class _SharePageState extends State<SharePage> {
     super.initState();
     fetchUserData();
   }
+  String _profilePictureUrl = '';
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   int sharingCount = 0;
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -84,10 +86,25 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
                 MaterialPageRoute(builder: (context) => LoginPage()),
               );
             },
-            child: Text(
-              "Sign In",
-              style: TextStyle(color: Colors.white),
-            ),
+            child: InkWell(
+  onTap: () {
+    // Navigate to the profile page here
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ProfilePage()),
+    );
+  },
+  child: CircleAvatar(
+    radius: 50,
+    backgroundImage: _profilePictureUrl.isEmpty
+        ? null // No background image for the icon
+        : NetworkImage(_profilePictureUrl), // Display image from URL
+    child: _profilePictureUrl.isEmpty
+        ? Icon(Icons.person) // Icon when no profile picture
+        : null,
+  ),
+),
+
           ),
         ],
       ),
