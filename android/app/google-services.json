@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1010200687006",
+    "project_id": "yoo-katale",
+    "storage_bucket": "yoo-katale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010200687006:android:7b66a57e4537ba54eba68f",
+        "android_client_info": {
+          "package_name": "com.example.yoo_katale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010200687006-8d3f7nn6sb67vd2fana4m1tl77ljpnj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhDqw31RNJPdg3vawORRDU-4tNlY7ZH7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010200687006-8d3f7nn6sb67vd2fana4m1tl77ljpnj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
